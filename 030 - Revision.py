@@ -1,6 +1,7 @@
  #Inverse Number 
 N = int(input("Entrez la valeur de N: "))
 M= N 
+P =N 
 
 inverse = 0
 
@@ -42,11 +43,15 @@ print("---------------------------------------------------")
 
 # Factoriel
 F = 1
-print(F, end= " ")
 for i in range(1, 6): 
     F =F * i 
-    print(F, end= " ")
 
-
-    
-
+# Nombre parfait 
+S = 0 
+for i in range(1, P): 
+    if P % i == 0: 
+        S =S + i
+if S == P: 
+    print("le nombre est parfait", P)
+else : 
+    print("le nombre n'est pas parfait")
