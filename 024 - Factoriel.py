@@ -8,7 +8,6 @@ else:
     F=1
     for i in range(2,n+1):
         F = F * i
-        
 print("La factoriel de ",n , "est ", F)
 
 
