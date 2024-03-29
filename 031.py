@@ -9,5 +9,4 @@ while N !=0 :
     b= b + reste * p 
     order  = order + 1
     N = N // 2
-
 print(b)
