@@ -70,18 +70,42 @@ Colonne = int(input("Entrez le nombre de Colonne : "))
 #         * * *
 #           *
 
-espace = Ligne -1 
-etoile =  1
+# espace = Ligne -1 
+# etoile =  1
 
-for i in range(1, Ligne*2):
-    for j in range(0, espace):
-        print("  ", end="")
-    for j in range(1, etoile*2):
-        print("* ", end="")
-    if  i < Ligne :
-        espace -= 1
-        etoile += 1
-    else :
-        espace += 1
-        etoile -= 1
-    print("")
+# for i in range(1, Ligne*2):
+#     for j in range(0, espace):
+#         print("  ", end="")
+#     for j in range(1, etoile*2):
+#         print("* ", end="")
+#     if  i < Ligne :
+#         espace -= 1
+#         etoile += 1
+#     else :
+#         espace += 1
+#         etoile -= 1
+#     print("")
+
+#########################################################
+
+# Lettre A : 
+
+#   * * *   
+# *       *
+# *       *
+# * * * * *
+# *       *
+# *       *
+# *       *
+for i in range(1, Ligne+1):
+    for j in range(1, 6):
+        if (j == 1 or j==5) and (i != 1):
+            print("* ", end="")
+        elif (i ==1 or i ==(Ligne+1)//2) and (j>1 and j<5):
+            print("* ", end="")
+        else :
+            print("  ", end="")
+    print()
+
+
+#########################################################
