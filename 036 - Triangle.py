@@ -48,10 +48,40 @@ Colonne = int(input("Entrez le nombre de Colonne : "))
 # * * *
 # * *
 # *
-p = 1
-for i in range(1, Colonne*2-1+1) :
-    for j in range(1, p+1):
+# p = 1
+# for i in range(1, Colonne*2-1+1) :
+#     for j in range(1, p+1):
+#         print("* ", end="")
+#     if i < Colonne : p+=1
+#     else : p-=1
+#     print()
+#########################################################
+
+
+#           * 
+#         * * * 
+#       * * * * * 
+#     * * * * * * *
+#   * * * * * * * * *
+# * * * * * * * * * * *
+#   * * * * * * * * *
+#     * * * * * * *
+#       * * * * *
+#         * * *
+#           *
+
+espace = Ligne -1 
+etoile =  1
+
+for i in range(1, Ligne*2):
+    for j in range(0, espace):
+        print("  ", end="")
+    for j in range(1, etoile*2):
         print("* ", end="")
-    if i < Colonne : p+=1
-    else : p-=1
-    print()
+    if  i < Ligne :
+        espace -= 1
+        etoile += 1
+    else :
+        espace += 1
+        etoile -= 1
+    print("")
