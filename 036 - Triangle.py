@@ -8,10 +8,10 @@ Colonne = int(input("Entrez le nombre de Colonne : "))
 #   * * * * * * * * * 
 # * * * * * * * * * * * 
 
-# for i in range(0, Ligne):
-#     for j in range(0, Ligne-i):
+# for i in range(1, Ligne+1):
+#     for j in range(1, Ligne-i+1):
 #         print("  ", end="")
-#     for j in range(0, 2*i-1):
+#     for j in range(1, 2*i-1+1):
 #         print("* ", end="")
 #     print() 
 
