@@ -116,8 +116,62 @@ Colonne = int(input("Entrez le nombre de Colonne : "))
 # 3  3  3  3  3  3  3  3
 # 4  4  4  4  4  4  4  4
 
-for i in range (1, Ligne+1):
-    for j in range(1, Colonne+1):
-        print(i, end=" ")
-    print(i)
-    
+# for i in range (1, Ligne+1):
+#     for j in range(1, Colonne+1):
+#         print(i, end=" ")
+#     print(i)
+
+#########################################################
+
+# * * * * * *
+# *         *
+# *         *
+# * * * * * *
+# for i in range (1, Ligne+1):
+#     for j in range (1, Colonne+1):
+#         if i == 1 or i == Ligne or j == 1 or j == Colonne:
+#             print("* ", end="")
+#         else:
+#             print("  ", end="")
+#     print()
+
+###########################################
+
+# * * * * * * * * * 
+# * *           * * 
+# *   *       *   * 
+# *     *   *     * 
+# *       *       * 
+# *     *   *     * 
+# *   *       *   * 
+# * *           * * 
+# * * * * * * * * *
+
+# for i in range(1, Ligne+1):
+#     for j in range(1, Colonne+1):
+#         if i == 1 or i == Ligne or j ==1 or j == Colonne or i == j or j== Ligne - i +1 :
+#             print("* ", end="")
+#         else:
+#             print("  ", end="")
+#     print()
+
+
+###########################################################
+
+#             + + + + + + + 
+#           + + + + + + + 
+#         + + + + + + + 
+#       + + + + + + + 
+#     + + + + + + + 
+#   + + + + + + + 
+# + + + + + + + 
+
+# for i in range(1 , Ligne+1):
+#     for j in range(1, Ligne - i+1):
+#         print("  ", end="")
+#     for j in range(1, Ligne+1):
+#         print("+ ", end="")
+#     print()
+
+for i in range(1, 10 +1):
+    print(i, " * ", Ligne, " = ", i*Ligne)
