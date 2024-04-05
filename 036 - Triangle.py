@@ -200,7 +200,7 @@ n=65
 for i in range(1, Ligne+1):
     for j in range(1, Ligne-i+1): 
         print("  ", end="")
-    for i in range(1, i-1+1):
+    for i in range(1, i+1):
         print(chr(n), end=" ")
         n+=1
     print()
