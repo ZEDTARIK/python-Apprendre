@@ -183,9 +183,24 @@ Colonne = int(input("Entrez le nombre de Colonne : "))
 # G H I J
 # K L M N O
 
+#n=65
+# for i in range(1, Ligne +1) : 
+#     for j in range(1, i):
+#         print(chr(n), end=" ")
+#         n+=1
+#     print()
+########################################################################
+#         A
+#       B C
+#     D E F
+#   G H I J
+# K L M N O
+
 n=65
-for i in range(1, Ligne +1) : 
-    for j in range(1, i):
+for i in range(1, Ligne+1):
+    for j in range(1, Ligne-i+1): 
+        print("  ", end="")
+    for i in range(1, i-1+1):
         print(chr(n), end=" ")
         n+=1
     print()
@@ -194,3 +209,4 @@ for i in range(1, Ligne +1) :
 # for i in range(1, 10 +1):
 #     print(i, " * ", Ligne, " = ", i*Ligne)
 ########################################################################
+
