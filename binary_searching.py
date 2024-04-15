@@ -11,19 +11,23 @@ def find_target_index(arr, target_value):
     start_time = time.time()
 
     while low <= high:
+        end_time = time.time()
         mid = (low + high) // 2
 
         if arr[mid] == target_value:
-            end_time = time.time()
-            print(f"Execution time: {end_time - start_time} seconds")
+            
+            print(f"Execution time: {format(end_time - start_time, ".2f")} seconds")
             return mid
         elif arr[mid] < target_value:
             low = mid + 1
+            print(f"Execution time: {format(end_time - start_time, ".2f")} seconds")
         else:
             high = mid - 1
+            print(f"Execution time: {format(end_time - start_time, ".2f")} seconds")
 
     return -1
 
 if __name__ == "__main__":
-    arr = range(1, 1_000_000_000_000)
-    print(find_target_index(arr, 1954))
+    arr = range(1, 100_000_000_000_000)
+    print("found in index :", find_target_index(arr, 6))
+    print("found in index :", find_target_index(arr, 415487))
