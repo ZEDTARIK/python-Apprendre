@@ -1,13 +1,15 @@
-# This code defines a function called `selection_sort` that implements the Selection Sort algorithm to sort a given list `arr` in ascending order.
-# It also includes a test function called `test_selection_sort` that tests the `selection_sort` function with different test cases.
+import time
 
 def selection_sort(arr):
+    start_time = time.time()
     for i in range(len(arr)):
         min_index = i
         for j in range(i+1, len(arr)):
             if arr[j] < arr[min_index]:
                 min_index = j
         arr[i], arr[min_index] = arr[min_index], arr[i]
+    end_time = time.time()
+    print(f"Time taken for selection sort: {end_time - start_time} seconds")
     return arr
 
 def test_selection_sort():
