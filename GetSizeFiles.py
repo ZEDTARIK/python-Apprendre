@@ -1,4 +1,5 @@
 import os
+import time
 
 def calculate_folder_size(folder_path):
     """
@@ -37,10 +38,16 @@ def update_folder_sizes_in_file(file_path):
 
     # Calculate folder sizes and generate updated lines
     updated_lines = []
+    start_time = time.time()  # Start timing
+
     for folder_path in folder_paths:
         size = calculate_folder_size(folder_path)
         size_str = "Folder not found" if size is None else f"{size} bytes"
         updated_lines.append(f"{folder_path} ; {size_str}")
+
+    end_time = time.time()  # End timing
+    elapsed_time = end_time - start_time
+    print(f"Elapsed time: {elapsed_time:.2f} seconds")
 
     # Write updated lines back to the file
     with open(file_path, 'w') as file:
